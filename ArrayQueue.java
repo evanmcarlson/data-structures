@@ -1,6 +1,7 @@
 import java.lang.reflect.Array;
 import java.util.EmptyStackException;
 
+// WARNING: growArray does not work as expected! There are two parts you need to copy to the new array in most cases: from 0 to tail, and from head to the end; from head to tail is just one of the possibilities (head happens to be 0)
 public class ArrayQueue<T> implements Queue<T> {
 
     T[] queue;
